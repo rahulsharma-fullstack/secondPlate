@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Restaurants from './pages/Restaurants';
@@ -9,11 +9,11 @@ const App = () => {
   return (
     <Router>
       <Layout>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/restaurants" component={Restaurants} />
-          <Route path="/about" component={About} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/restaurants" element={<Restaurants />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </Layout>
     </Router>
   );
