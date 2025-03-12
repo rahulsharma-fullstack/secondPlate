@@ -1,38 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Home from './pages/Home';
+import Restaurants from './pages/Restaurants';
+import About from './pages/About';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div className="flex justify-center space-x-4 my-8">
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-4xl font-bold text-center">Vite + React</h1>
-      <div className="card p-4 bg-gray-800 rounded-lg shadow-lg">
-        <button 
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          count is {count}
-        </button>
-        <p className="mt-4 text-gray-400">
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs mt-8 text-center text-gray-500">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/restaurants" component={Restaurants} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </Layout>
+    </Router>
+  );
+};
 
-export default App
+export default App;
