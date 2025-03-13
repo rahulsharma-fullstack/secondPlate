@@ -4,12 +4,12 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white pt-12 pb-6">
+    <footer className="bg-secondary text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center mb-4">
-              <span className="text-white font-bold text-xl">second<span className="text-green-500">Plate</span></span>
+              <span className="text-white font-bold text-xl">second<span className="text-primary">Plate</span></span>
             </Link>
             <p className="text-gray-400 text-sm mb-4">
               Connecting restaurants with customers to reduce food waste and offer great discounts.

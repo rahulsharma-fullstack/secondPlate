@@ -9,14 +9,14 @@ function Hero() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:pr-12">
             <div className="mb-4">
-              <span className="inline-flex items-center text-green-500 text-sm">
-                <span className="w-2 h-2 inline-block bg-green-500 rounded-full mr-2"></span>
+              <span className="inline-flex items-center text-primary text-sm">
+                <span className="w-2 h-2 inline-block bg-primary rounded-full mr-2"></span>
                 Reducing Food Waste, One Meal at a Time
               </span>
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
-              Delicious food at <span className="text-green-500">amazing discounts</span>
+              Delicious food at <span className="text-primary">amazing discounts</span>
             </h1>
             
             <p className="text-gray-600 mb-6">
@@ -64,7 +64,7 @@ function Hero() {
                   <p className="text-gray-500 text-xs">Mediterranean • 0.7 miles</p>
                   
                   <div className="mt-3 flex justify-between items-center">
-                    <button className="bg-green-500 text-white text-sm px-3 py-1 rounded-md">
+                    <button className="bg-primary text-white text-sm px-3 py-1 rounded-md">
                       40%
                     </button>
                   </div>
