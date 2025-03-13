@@ -8,7 +8,7 @@ function FeaturedRestaurants() {
     {
       id: 1,
       name: "Pizza Express",
-      image: "/api/placeholder/300/200",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Italian • Pizza",
       rating: 4.7,
       distance: "0.5 miles",
@@ -19,7 +19,7 @@ function FeaturedRestaurants() {
     {
       id: 2,
       name: "Sushi Palace",
-      image: "/api/placeholder/300/200",
+      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Japanese • Sushi",
       rating: 4.8,
       distance: "0.7 miles",
@@ -30,7 +30,7 @@ function FeaturedRestaurants() {
     {
       id: 3,
       name: "Taco Heaven",
-      image: "/api/placeholder/300/200",
+      image: "https://images.unsplash.com/photo-1574484284002-952d92456975?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Mexican • Tacos",
       rating: 4.5,
       distance: "0.4 miles",
@@ -41,7 +41,7 @@ function FeaturedRestaurants() {
     {
       id: 4,
       name: "Green Curry",
-      image: "/api/placeholder/300/200",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Thai • Curry",
       rating: 4.6,
       distance: "1.2 miles",

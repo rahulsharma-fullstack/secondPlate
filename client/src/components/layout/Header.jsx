@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../common/Button';
 
+
 function Header() {
   return (
     <header className="bg-white shadow-sm py-4">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/" className="text-primary font-bold text-xl">
+          <Link to="/" className="flex items-center text-primary font-bold text-xl">
+            <img src="Logo.png" alt="secondPlate logo" className="h-8 w-8 mr-2" /> {/* Add the logo */}
             <span className="text-gray-800">second</span>Plate
           </Link>
           
@@ -31,6 +33,16 @@ function Header() {
               <li>
                 <Link to="/about" className="text-gray-600 hover:text-primary">
                   About
+                </Link>
+              </li>
+              <li>
+                <Link to="/teams" className="text-gray-600 hover:text-primary">
+                  Teams
+                </Link>
+              </li>
+              <li>
+                <Link to="/testimonial" className="text-gray-600 hover:text-primary">
+                  Testimonials
                 </Link>
               </li>
             </ul>

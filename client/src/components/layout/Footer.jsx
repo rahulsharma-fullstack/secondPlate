@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
+
 function Footer() {
   return (
     <footer className="bg-secondary text-white pt-12 pb-6">
@@ -9,6 +10,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center mb-4">
+              <img src='./Logo.png' alt="secondPlate logo" className="h-8 w-8 mr-2" /> {/* Add the logo */}
               <span className="text-white font-bold text-xl">second<span className="text-primary">Plate</span></span>
             </Link>
             <p className="text-gray-400 text-sm mb-4">
@@ -53,9 +55,9 @@ function Footer() {
             <h3 className="text-sm font-semibold mb-4 uppercase">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white text-sm">About Us</Link></li>
+              <li><Link to="/teams" className="text-gray-400 hover:text-white text-sm">Our Team</Link></li>
+              <li><Link to="/testimonial" className="text-gray-400 hover:text-white text-sm">Testimonials</Link></li>
               <li><Link to="/mission" className="text-gray-400 hover:text-white text-sm">Our Mission</Link></li>
-              <li><Link to="/careers" className="text-gray-400 hover:text-white text-sm">Careers</Link></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-white text-sm">Blog</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white text-sm">Contact</Link></li>
             </ul>
           </div>
