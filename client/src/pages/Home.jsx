@@ -3,6 +3,7 @@ import Hero from '../components/home/Hero';
 import FeaturedRestaurants from '../components/home/FeaturedRestaurants';
 import HowItWorks from '../components/home/HowItWorks';
 import JoinMovement from '../components/home/JoinMovement';
+import RestaurantSpotlight from '../components/home/RestaurantSpotlight';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <FeaturedRestaurants />
       <HowItWorks />
       <JoinMovement />
+      <RestaurantSpotlight/>
     </div>
   );
 }
