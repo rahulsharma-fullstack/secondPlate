@@ -1,6 +1,13 @@
 
-html {
+/* html {
   scroll-behavior: smooth;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 body {
@@ -8,6 +15,10 @@ body {
   @apply text-gray-800;
 }
 
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+ */
 
 /* body {
   font-family: Arial, sans-serif;

@@ -7,7 +7,7 @@ function Restaurants() {
     {
       id: 1,
       name: "Pizza Express",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Italian • Pizza",
       rating: 4.7,
       distance: "0.5 miles",
@@ -18,7 +18,7 @@ function Restaurants() {
     {
       id: 2,
       name: "Sushi Palace",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Japanese • Sushi",
       rating: 4.8,
       distance: "0.7 miles",
@@ -29,7 +29,7 @@ function Restaurants() {
     {
       id: 3,
       name: "Taco Heaven",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Mexican • Tacos",
       rating: 4.5,
       distance: "0.4 miles",
@@ -40,7 +40,7 @@ function Restaurants() {
     {
       id: 4,
       name: "Green Curry",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Thai • Curry",
       rating: 4.6,
       distance: "1.2 miles",
@@ -51,7 +51,7 @@ function Restaurants() {
     {
       id: 5,
       name: "Burger Joint",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "American • Burgers",
       rating: 4.4,
       distance: "0.9 miles",
@@ -62,7 +62,7 @@ function Restaurants() {
     {
       id: 6,
       name: "Pasta Paradise",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Italian • Pasta",
       rating: 4.7,
       distance: "1.5 miles",
@@ -73,7 +73,7 @@ function Restaurants() {
     {
       id: 7,
       name: "Falafel Factory",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Middle Eastern",
       rating: 4.6,
       distance: "0.8 miles",
@@ -84,7 +84,7 @@ function Restaurants() {
     {
       id: 8,
       name: "Dim Sum House",
-      image: "/api/placeholder/300/200",
+      image: "https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       cuisine: "Chinese • Dim Sum",
       rating: 4.5,
       distance: "1.3 miles",

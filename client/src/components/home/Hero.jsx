@@ -7,13 +7,15 @@ import { FaStar, FaMapMarkerAlt, FaClock } from 'react-icons/fa'; // Corrected i
 function Hero() {
   return (
     <section className="py-12 md:py-16 ">
-      <div className="container px-4 md:px-6">
+      <div className='container-custom'>
+
+        <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div>
           <div className="inline-block rounded-full bg-green-100 px-3 py-1 text-sm text-green-600 mb-6">
               🌱 Reducing Food Waste, One Meal at a Time
             </div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-4">
+            <h1 className="h1 !text-5xl md:!text-6xl lg:!text-7xl">
               Delicious food at <span className="text-primary">amazing discounts</span>
             </h1>
             <p className="text-lg text-secondary mb-8 max-w-md">
@@ -78,6 +80,7 @@ function Hero() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
