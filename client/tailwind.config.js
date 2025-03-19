@@ -1,46 +1,143 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        primary: '#22c55e', // green-500
-        // 'primary-dark': '#14532d', // green-700
-        // 'primary-light': '#68d391', // green-300
-        secondary: '#2d3748', // gray-800
-        accent: '#e53e3e', // red-500
-        background: '#f7fafc', // gray-50
-        text: '#2d3748', // gray-800
-        white: '#ffffff',
-        black: '#000000',
-        gray: {
-          100: '#f7fafc',
-          200: '#edf2f7',
-          300: '#e2e8f0',
-          400: '#cbd5e0',
-          500: '#a0aec0',
-          600: '#718096',
-          700: '#4a5568',
-          800: '#2d3748',
-          900: '#1a202c',
-        },
-        green: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',  // Primary brand color
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
-        },
-      },
-    },
-    fontFamily: {
-      sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-    },
-  },
-  plugins: [],
+const config = {
+	darkMode: ["class"],
+	content: [
+		"./pages/**/*.{js,jsx,ts,tsx}",
+		"./components/**/*.{js,jsx,ts,tsx}",
+		"./app/**/*.{js,jsx,ts,tsx}",
+		"./src/**/*.{js,jsx,ts,tsx}",
+	],
+	prefix: "",
+	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px'
+			}
+		},
+		extend: {
+			colors: {
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+				primary: {
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
+				},
+				secondary: {
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				muted: {
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
+				},
+				card: {
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
+				},
+				sidebar: {
+					DEFAULT: 'hsl(var(--sidebar-background))',
+					foreground: 'hsl(var(--sidebar-foreground))',
+					primary: 'hsl(var(--sidebar-primary))',
+					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+					accent: 'hsl(var(--sidebar-accent))',
+					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					border: 'hsl(var(--sidebar-border))',
+					ring: 'hsl(var(--sidebar-ring))'
+				}
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			keyframes: {
+				'accordion-down': {
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
+				},
+				'accordion-up': {
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1', transform: 'translateY(0)' },
+					'100%': { opacity: '0', transform: 'translateY(10px)' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				'slide-in-bottom': {
+					'0%': { transform: 'translateY(20%)' },
+					'100%': { transform: 'translateY(0)' }
+				},
+				'slide-in-top': {
+					'0%': { transform: 'translateY(-20%)' },
+					'100%': { transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'pulse-subtle': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.03)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-500px 0' },
+					'100%': { backgroundPosition: '500px 0' }
+				}
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.7s ease-out forwards',
+				'fade-out': 'fade-out 0.7s ease-out forwards',
+				'slide-in-right': 'slide-in-right 0.7s ease-out forwards',
+				'slide-in-left': 'slide-in-left 0.7s ease-out forwards',
+				'slide-in-bottom': 'slide-in-bottom 0.7s ease-out forwards',
+				'slide-in-top': 'slide-in-top 0.7s ease-out forwards',
+				'scale-in': 'scale-in 0.7s ease-out forwards',
+				'pulse-subtle': 'pulse-subtle 4s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'shimmer': 'shimmer 2s infinite linear'
+			},
+			fontFamily: {
+				sans: ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
+				serif: ['Georgia', 'serif']
+			}
+		}
+	},
+	plugins: [require("tailwindcss-animate")],
 };
+
+export default config;

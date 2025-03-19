@@ -1,4 +1,4 @@
-import { cn } from '../../lib/util.js';
+import { cn } from '@/lib/util.js';
 
 const DiscountBadge = ({ discount, className, size = 'default', ...props }) => {
   const sizeClasses = {

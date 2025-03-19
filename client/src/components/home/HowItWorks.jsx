@@ -1,65 +1,85 @@
-import React from 'react';
-import { FaSearch, FaShoppingCart, FaUtensils } from 'react-icons/fa';
+import { CheckCircle2, MapPin, Utensils, CreditCard } from 'lucide-react';
+import AnimatedSection from './AnimatedSection';
 
-function HowItWorks() {
-  const steps = [
-    {
-      id: 1,
-      icon: <FaSearch className="text-green-500 text-3xl" />,
-      title: "Find Nearby Restaurants",
-      description: "Discover local restaurants with surplus food available at discounted prices."
-    },
-    {
-      id: 2,
-      icon: <FaShoppingCart className="text-green-500 text-3xl" />,
-      title: "Place Your Order",
-      description: "Order directly through the app for pickup or dine-in at your chosen restaurant."
-    },
-    {
-      id: 3,
-      icon: <FaUtensils className="text-green-500 text-3xl" />,
-      title: "Enjoy Your Meal",
-      description: "Pick up your discounted meal or dine in using the digital receipt in the app."
-    }
-  ];
+const steps = [
+  {
+    icon: <MapPin className="h-10 w-10 text-primary" />,
+    title: "Find Nearby Restaurants",
+    description: "Discover local restaurants with surplus food available at discounted prices."
+  },
+  {
+    icon: <CreditCard className="h-10 w-10 text-primary" />,
+    title: "Place Your Order",
+    description: "Order directly through the app for pickup or dine-in at your chosen restaurant."
+  },
+  {
+    icon: <Utensils className="h-10 w-10 text-primary" />,
+    title: "Enjoy Your Meal",
+    description: "Pick up your discounted meal or dine in using the digital coupon in the app."
+  }
+];
 
+const HowItWorks = () => {
   return (
-    <div className="py-12 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-2">
-          <span className="text-sm font-medium text-green-500">Simple Process</span>
-        </div>
+    <section id="how-it-works" className="py-20 bg-secondary/50 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      
+      <div className="container-custom">
+        <AnimatedSection animation="fade-up" className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-3">
+            Simple Process
+          </div>
+          <h2 className="h2 mb-4">How secondPlate Works</h2>
+          <p className="text-lg text-foreground/70">
+            Our platform connects you with local restaurants offering surplus food at great discounts, making it easy to save money and reduce food waste.
+          </p>
+        </AnimatedSection>
         
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-          How secondPlate Works
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step) => (
-            <div key={step.id} className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
-                    {step.icon}
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {/* Connecting line for desktop */}
+          <div className="hidden md:block absolute top-1/3 left-0 right-0 h-0.5 bg-primary/20"></div>
+          
+          {steps.map((step, index) => (
+            <AnimatedSection 
+              key={index}
+              animation="fade-up"
+              delay={index * 0.1}
+              className="relative bg-white rounded-2xl p-6 shadow-md"
+            >
+              {/* Step number */}
+              <div className="absolute -top-5 left-6 flex items-center justify-center h-10 w-10 rounded-full bg-primary text-white font-bold">
+                {index + 1}
               </div>
               
-              <div className="relative mb-6">
-                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-full border-t border-gray-200 -z-10"></div>
-                <div className="bg-white w-8 h-8 rounded-full border-2 border-green-500 flex items-center justify-center mx-auto text-green-500 font-medium">
-                  {step.id}
-                </div>
+              <div className="pt-6 flex flex-col items-center text-center">
+                <div className="mb-4 p-3 rounded-full bg-primary/10">{step.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                <p className="text-foreground/70">{step.description}</p>
               </div>
-              
-              <h3 className="font-semibold mb-2 text-gray-800">{step.title}</h3>
-              <p className="text-gray-600 text-sm">{step.description}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
+        
+        <AnimatedSection animation="fade-up" className="max-w-3xl mx-auto mt-16 bg-white rounded-2xl p-6 md:p-8 shadow-md">
+          <div className="flex flex-col md:flex-row gap-6 items-center">
+            <div className="flex-shrink-0">
+              <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <CheckCircle2 className="h-8 w-8 text-primary" />
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-2">Join the Movement to Reduce Food Waste</h3>
+              <p className="text-foreground/70">
+                Every year, billions of pounds of food are wasted worldwide. By choosing to purchase surplus food, you're helping restaurants reduce waste while enjoying quality meals at a discount.
+              </p>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default HowItWorks;
